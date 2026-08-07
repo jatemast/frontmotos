@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-asphalt-900 text-neutral-100 font-body antialiased;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(242, 163, 61, 0.06), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(63, 167, 164, 0.06), transparent 35%);
+}
+
+::selection {
+  background: rgba(242, 163, 61, 0.35);
+}
+
+/* Scrollbar discreto, coherente con el tema oscuro */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333A42; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #4A535C; }
+
+:focus-visible {
+  outline: 2px solid #F2A33D;
+  outline-offset: 2px;
+}
+
+.plate {
+  @apply font-mono tracking-wider bg-asphalt-950 border border-asphalt-600 rounded-md px-2 py-0.5 text-headlight-400;
+}
